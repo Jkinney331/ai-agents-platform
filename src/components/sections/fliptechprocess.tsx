@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import Hyperspeed from "../ui/hyperspeed";
 
 interface Step {
   icon: React.ReactNode;
@@ -111,28 +110,23 @@ export default function FlipTechProcess() {
 
   return (
     <section className="w-full px-4 md:px-8 py-16 text-center bg-white dark:bg-[#18181B] transition-colors duration-300 relative overflow-hidden">
-      {/* Hyperspeed Background */}
-      <div className="absolute inset-0 opacity-30">
-        <Hyperspeed
-          effectOptions={{
-            length: 400,
-            roadWidth: 12,
-            speedUp: 1.5,
-            totalSideLightSticks: 25,
-            lightPairsPerRoadWay: 50,
-            colors: {
-              roadColor: 0x0a0a0a,
-              islandColor: 0x0c0c0c,
-              background: 0x000000,
-              shoulderLines: 0x4a5568,
-              brokenLines: 0x4a5568,
-              leftCars: [0x3b82f6, 0x8b5cf6, 0x10b981],
-              rightCars: [0x06b6d4, 0x0ea5e9, 0x0284c7],
-              sticks: 0x06b6d4,
-            }
+      {/* Animated Background */}
+      <div className="absolute inset-0 opacity-20">
+        <div 
+          className="w-full h-full"
+          style={{
+            background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 50%, rgba(16, 185, 129, 0.1) 100%)',
+            animation: 'flow 6s ease-in-out infinite'
           }}
-          className="hyperspeed-bg"
-        />
+        >
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'repeating-linear-gradient(90deg, transparent 0px, rgba(59, 130, 246, 0.05) 20px, transparent 40px)',
+              animation: 'slide 4s linear infinite'
+            }}
+          />
+        </div>
       </div>
       
       {/* Content with proper z-index */}

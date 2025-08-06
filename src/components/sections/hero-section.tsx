@@ -4,36 +4,26 @@
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import { LiquidButton } from "../ui/Liquid-button";
-import Galaxy from "../ui/galaxy";
-import GalaxyErrorBoundary from "../ui/galaxy-error-boundary";
 
 const HeroSection = () => {
   const { hero } = siteConfig;
 
   return (
     <section id="hero" className="w-full relative">
-       <div style={{ width: '100%', height: '600px', position: 'absolute' }}>
-  <GalaxyErrorBoundary
-    fallbackProps={{
-      mouseRepulsion: true,
-      mouseInteraction: true,
-      density: 1.5,
-      glowIntensity: 0.5,
-      saturation: 0.8,
-      hueShift: 240,
-      className: "custom-galaxy"
+       <div 
+  className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20"
+  style={{ 
+    background: 'radial-gradient(ellipse at center, rgba(59, 130, 246, 0.15) 0%, rgba(147, 51, 234, 0.1) 50%, rgba(79, 70, 229, 0.05) 100%)',
+    animation: 'pulse 4s ease-in-out infinite'
+  }}
+>
+  <div 
+    className="absolute inset-0 opacity-30"
+    style={{
+      background: 'linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.1) 50%, transparent 70%)',
+      animation: 'shimmer 3s ease-in-out infinite'
     }}
-  >
-    <Galaxy
-      mouseRepulsion={true}
-      mouseInteraction={true}
-      density={1.5}
-      glowIntensity={0.5}
-      saturation={0.8}
-      hueShift={240}
-      className="custom-galaxy"
-    />
-  </GalaxyErrorBoundary>
+  />
 </div>
       <div className="relative flex flex-col items-center w-full px-6">
         <div className="absolute inset-0">

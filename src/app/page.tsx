@@ -6,6 +6,7 @@ const BentoSection = dynamic(() => import("@/components/sections/bento-section")
 const CompanyShowcase = dynamic(() => import("@/components/sections/company-showcase"));
 const PricingSection = dynamic(() => import("@/components/sections/pricing-section"));
 const TestimonialSection = dynamic(() => import("@/components/sections/testimonial-section"));
+const ContactSection = dynamic(() => import("@/components/sections/contact-section"));
 const FAQSection = dynamic(() => import("@/components/sections/faq-section"));
 const CTASection = dynamic(() => import("@/components/sections/cta-section"));
 const FooterSection = dynamic(() => import("@/components/sections/footer-section"));
@@ -35,6 +36,7 @@ export default function Home() {
       <WhyNowSection/>
       <PricingSection />
       <TestimonialSection />
+      {/* <ContactSection /> */}
       <FAQSection />
       <CTASection />
       <FooterSection />

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
+import Hyperspeed from "../ui/hyperspeed";
 
 interface Step {
   icon: React.ReactNode;
@@ -109,15 +110,41 @@ export default function FlipTechProcess() {
   }, []);
 
   return (
-    <section className="w-full px-4 md:px-8 py-16 text-center bg-white dark:bg-[#18181B] transition-colors duration-300">
-      <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
-        THE <span className="text-blue-500">FLIP-TECH</span> PROCESS
-      </h2>
-      <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300 px-2">
-        Our proven 14-day journey from concept to working AI solution.
-      </p>
+    <section className="w-full px-4 md:px-8 py-16 text-center bg-white dark:bg-[#18181B] transition-colors duration-300 relative overflow-hidden">
+      {/* Hyperspeed Background */}
+      <div className="absolute inset-0 opacity-30">
+        <Hyperspeed
+          effectOptions={{
+            length: 400,
+            roadWidth: 12,
+            speedUp: 1.5,
+            totalSideLightSticks: 25,
+            lightPairsPerRoadWay: 50,
+            colors: {
+              roadColor: 0x0a0a0a,
+              islandColor: 0x0c0c0c,
+              background: 0x000000,
+              shoulderLines: 0x4a5568,
+              brokenLines: 0x4a5568,
+              leftCars: [0x3b82f6, 0x8b5cf6, 0x10b981],
+              rightCars: [0x06b6d4, 0x0ea5e9, 0x0284c7],
+              sticks: 0x06b6d4,
+            }
+          }}
+          className="hyperspeed-bg"
+        />
+      </div>
+      
+      {/* Content with proper z-index */}
+      <div className="relative z-10">
+        <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
+          THE <span className="text-blue-500">FLIP-TECH</span> PROCESS
+        </h2>
+        <p className="mt-2 text-sm md:text-base text-gray-600 dark:text-gray-300 px-2">
+          Our proven 14-day journey from concept to working AI solution.
+        </p>
 
-      <div className="relative mt-12">
+        <div className="relative mt-12">
         {/* Animated Gradient Line - hidden on mobile/tablet */}
         <div className="hidden md:block absolute left-0 top-[86px] w-full h-1 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
           <motion.div
@@ -153,6 +180,7 @@ export default function FlipTechProcess() {
               </div>
             );
           })}
+        </div>
         </div>
       </div>
     </section>

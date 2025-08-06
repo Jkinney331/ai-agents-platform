@@ -1,8 +1,11 @@
+"use client";
+
 // import { HeroVideoSection } from "@/components/sections/hero-video-section";
 import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 import { LiquidButton } from "../ui/Liquid-button";
-import LightRays from "../ui/auoralightray";
+import Galaxy from "../ui/galaxy";
+import GalaxyErrorBoundary from "../ui/galaxy-error-boundary";
 
 const HeroSection = () => {
   const { hero } = siteConfig;
@@ -10,18 +13,27 @@ const HeroSection = () => {
   return (
     <section id="hero" className="w-full relative">
        <div style={{ width: '100%', height: '600px', position: 'absolute' }}>
-  <LightRays
-    raysOrigin="top-center"
-    raysColor="#00ffff"
-    raysSpeed={1.5}
-    lightSpread={0.8}
-    rayLength={1.2}
-    followMouse={true}
-    mouseInfluence={0.1}
-    noiseAmount={0.1}
-    distortion={0.05}
-    className="custom-rays"
-  />
+  <GalaxyErrorBoundary
+    fallbackProps={{
+      mouseRepulsion: true,
+      mouseInteraction: true,
+      density: 1.5,
+      glowIntensity: 0.5,
+      saturation: 0.8,
+      hueShift: 240,
+      className: "custom-galaxy"
+    }}
+  >
+    <Galaxy
+      mouseRepulsion={true}
+      mouseInteraction={true}
+      density={1.5}
+      glowIntensity={0.5}
+      saturation={0.8}
+      hueShift={240}
+      className="custom-galaxy"
+    />
+  </GalaxyErrorBoundary>
 </div>
       <div className="relative flex flex-col items-center w-full px-6">
         <div className="absolute inset-0">

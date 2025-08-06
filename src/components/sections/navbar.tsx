@@ -6,7 +6,7 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion, useScroll } from "motion/react";
+import { AnimatePresence, motion, useScroll } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { LiquidButton } from "../ui/Liquid-button";

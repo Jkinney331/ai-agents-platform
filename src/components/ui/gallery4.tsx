@@ -31,9 +31,9 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
   const scrollToIndex = (index: number) => {
     if (scrollContainerRef.current) {
       const container = scrollContainerRef.current;
-      const itemWidth = container.scrollWidth / items.length;
+      const cardWidth = container.clientWidth / itemsPerView + 24; // include gap
       container.scrollTo({
-        left: index * itemWidth,
+        left: index * cardWidth,
         behavior: "smooth",
       });
     }
@@ -114,40 +114,37 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
       <div className="relative">
         <div
           ref={scrollContainerRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth mx-auto"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', maxWidth: '1200px' }}
         >
-          {items.map((item, index) => (
+          {items.map((item) => (
             <div
               key={item.id}
-              className="flex-shrink-0 w-full sm:w-80 lg:w-96"
+              className="flex-shrink-0 w-[360px]"
             >
-              <div className="group relative rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="group relative rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-md hover:shadow-lg transition-all duration-300 h-[360px] flex flex-col">
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-44 overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Subtle gradient overlay for better text readability */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex-1 flex flex-col">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4 line-clamp-3">
                     {item.description}
                   </p>
-                  
-                  {/* Read More Link */}
                   <a
                     href={item.href}
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    className="mt-auto inline-flex items-center text-blue-600 dark:text-blue-400 font-medium text-sm hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                   >
                     Read more
                     <ChevronRight className="w-4 h-4 ml-1" />

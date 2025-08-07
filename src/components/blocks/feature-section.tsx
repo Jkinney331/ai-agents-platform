@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 
@@ -78,13 +77,6 @@ export function FeatureSteps({
                 transition={{ duration: 0.5 }}
                 className="space-y-6"
               >
-                {/* Step Badge */}
-                <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full">
-                  <span className="text-sm font-semibold text-blue-600 dark:text-blue-400">
-                    {features[currentIndex].step}
-                  </span>
-                </div>
-
                 {/* Title */}
                 <h3 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                   {features[currentIndex].title}
@@ -95,14 +87,15 @@ export function FeatureSteps({
                   {features[currentIndex].content}
                 </p>
 
-                {/* Progress Indicators */}
+                {/* Progress Indicators (dots only, no numbers) */}
                 <div className="flex gap-2 pt-4">
                   {features.map((_, index) => (
                     <button
                       key={index}
+                      aria-label={`Go to slide ${index + 1}`}
                       onClick={() => goToSlide(index)}
                       className={cn(
-                        "w-3 h-3 rounded-full transition-all duration-300",
+                        "w-2.5 h-2.5 rounded-full transition-all duration-300",
                         index === currentIndex
                           ? "bg-blue-600 dark:bg-blue-400 scale-110"
                           : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
@@ -119,16 +112,19 @@ export function FeatureSteps({
                 onClick={prevSlide}
                 className="p-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <ChevronLeft className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <span className="sr-only">Previous</span>
+                {/* using simple character to avoid new icon import */}
+                ‹
               </button>
               <span className="text-sm text-gray-500 dark:text-gray-400">
-                {currentIndex + 1} of {features.length}
+                {currentIndex + 1} / {features.length}
               </span>
               <button
                 onClick={nextSlide}
                 className="p-3 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
               >
-                <ChevronRight className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <span className="sr-only">Next</span>
+                ›
               </button>
             </div>
           </div>
@@ -138,9 +134,9 @@ export function FeatureSteps({
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 1.1 }}
+                exit={{ opacity: 0, scale: 1.02 }}
                 transition={{ duration: 0.5 }}
                 className={cn("relative rounded-2xl overflow-hidden", imageHeight)}
               >
@@ -151,17 +147,10 @@ export function FeatureSteps({
                   className="object-cover"
                   priority
                 />
-                {/* Gradient overlay for better text readability */}
+                {/* Subtle overlay only, no numbers */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               </motion.div>
             </AnimatePresence>
-
-            {/* Floating step indicator */}
-            <div className="absolute -top-4 -right-4 w-16 h-16 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-lg">
-                {currentIndex + 1}
-              </span>
-            </div>
           </div>
         </div>
       </div>

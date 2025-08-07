@@ -13,6 +13,7 @@ const FooterSection = dynamic(() => import("@/components/sections/footer-section
 const FlipTechProcess = dynamic(() => import("@/components/sections/fliptechprocess"));
 const AIAgentsSection = dynamic(() => import("@/components/AIAgentsSection"));
 const GlowCard = dynamic(() => import("@/components/ui/GlowEffectCard"));
+const DashboardFeaturesDemo = dynamic(() => import("@/components/blocks/dashboard-features-demo").then(mod => ({ default: mod.DashboardFeaturesDemo })));
 
 import CaseStudiesSection from "@/components/casestudies";
 import HeroSection from "@/components/sections/hero-section";
@@ -27,9 +28,9 @@ export default function Home() {
       <BentoSection />
       {/* <QuoteSection /> */}
       <EmpowerCards/>
-      {/* <FeatureSection /> */}
       <AIAgentsSection/>
       <GlowCard/>
+      <DashboardFeaturesDemo/>
       {/* <GrowthSection /> */}
       <FlipTechProcess/>
       <CaseStudiesSection/>

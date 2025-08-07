@@ -10,7 +10,7 @@ const CTASection = () => {
   return (
     <section
       id="cta"
-      className="flex flex-col items-center justify-center w-full"
+      className="flex flex-col items-center justify-center w-full px-6 md:px-12 lg:px-20 py-20 border-t border-border"
     >
       <div className="w-full">
         <div className="h-[400px] md:h-[400px] overflow-hidden shadow-xl w-full border border-border rounded-xl bg-secondary relative z-20">

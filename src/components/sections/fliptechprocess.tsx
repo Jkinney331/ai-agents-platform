@@ -109,7 +109,7 @@ export default function FlipTechProcess() {
   }, []);
 
   return (
-    <section className="w-full px-4 md:px-8 py-16 text-center bg-white dark:bg-[#18181B] transition-colors duration-300 relative overflow-hidden">
+    <section className="w-full px-6 md:px-12 lg:px-20 py-20 text-center bg-white dark:bg-[#18181B] transition-colors duration-300 relative overflow-hidden border-t border-border">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div 
@@ -139,16 +139,6 @@ export default function FlipTechProcess() {
         </p>
 
         <div className="relative mt-12">
-        {/* Animated Gradient Line - hidden on mobile/tablet */}
-        <div className="hidden md:block absolute left-0 top-[86px] w-full h-1 bg-gray-300 dark:bg-gray-700 rounded-full overflow-hidden">
-          <motion.div
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.1, ease: "linear" }}
-            className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-green-300"
-          />
-        </div>
-
         {/* Steps */}
         <div className="relative z-10 flex flex-col items-center gap-10 md:flex-row md:justify-between md:gap-6">
           {steps.map((step, index) => {

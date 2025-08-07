@@ -15,7 +15,7 @@ const FAQSection = () => {
   return (
     <section
       id="faq"
-      className="flex flex-col items-center justify-center gap-10 pb-10 w-full relative"
+      className="flex flex-col items-center justify-center gap-10 py-20 w-full relative border-t border-border"
     >
       <SectionHeader>
         <h2 className="text-3xl md:text-4xl font-medium tracking-tighter text-center text-balance">
@@ -26,7 +26,7 @@ const FAQSection = () => {
         </p>
       </SectionHeader>
 
-      <div className="max-w-3xl w-full mx-auto px-10">
+      <div className="max-w-3xl w-full mx-auto px-6 md:px-12 lg:px-20">
         <Accordion
           type="single"
           collapsible

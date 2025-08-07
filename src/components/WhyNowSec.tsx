@@ -28,7 +28,7 @@ const reasons = [
 
 const WhyNowSection = () => {
   return (
-    <section className="w-full px-6 py-20 max-w-7xl mx-auto cursor-pointer">
+    <section className="w-full px-6 md:px-12 lg:px-20 py-20 cursor-pointer border-t border-border">
       <h2 className="text-3xl font-bold text-center mb-12 dark:text-white text-gray-900">
         Why Now Is The Time
       </h2>

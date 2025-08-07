@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/sections/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
-import { siteConfig } from "@/lib/site";
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -20,12 +19,12 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL("http://localhost:3000"),
   title: {
-    default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    default: "Flip-Tech Pro",
+    template: `%s - Flip-Tech Pro`,
   },
-  description: siteConfig.description,
+  description: "Where Vision Meets Velocity - From idea to production in 14 days",
 };
 
 export default function RootLayout({
@@ -49,9 +48,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="max-w-7xl mx-auto border-x relative">
-            <div className="block w-px h-full border-l border-border absolute top-0 left-6 z-10"></div>
-            <div className="block w-px h-full border-r border-border absolute top-0 right-6 z-10"></div>
+          <div className="w-full grid grid-cols-1 relative">
             <Navbar />
             {children}
           </div>

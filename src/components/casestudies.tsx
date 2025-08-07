@@ -28,7 +28,7 @@ const caseStudies = [
 
 const CaseStudiesSection = () => {
   return (
-    <section className="w-full px-8 py-16 max-w-7xl mx-auto cursor-pointer">
+    <section className="w-full px-6 md:px-12 lg:px-20 py-20 cursor-pointer border-t border-border">
       <h2 className="text-3xl font-bold mb-10 text-center dark:text-white text-gray-900">
         Case Studies
       </h2>

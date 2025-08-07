@@ -23,7 +23,7 @@ const PricingSection = () => {
   return (
     <section
       id="pricing"
-      className="flex flex-col items-center justify-center gap-10 py-20 px-4 w-full relative"
+      className="flex flex-col items-center justify-center gap-10 py-20 px-6 md:px-12 lg:px-20 w-full relative border-t border-border"
     >
       <SectionHeader>
         {/* Pricing name and title */}

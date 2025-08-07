@@ -59,8 +59,8 @@ const agentData = [
   const [selectedAgent, setSelectedAgent] = useState(agentData[0]);
 
   return (
-    <section className="py-20 bg-agent-background px-4">
-      <div className="container mx-auto px-4 max-w-7xl">
+    <section className="py-20 bg-agent-background px-6 md:px-12 lg:px-20 w-full border-t border-border relative z-10">
+      <div className="w-full">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -114,11 +114,6 @@ const agentData = [
               </p>
             </div>
           </Card>
-        </div>
-
-        {/* Connection Line */}
-        <div className="relative flex items-center justify-center mb-16">
-          <div className="w-1 h-20 bg-gradient-to-b from-indigo-500 via-purple-500 to-pink-500 animate-pulse rounded-full" />
         </div>
 
         {/* AI Control Dashboard Section */}

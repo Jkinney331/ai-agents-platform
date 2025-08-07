@@ -27,7 +27,7 @@ const EmpowerCards = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-transparent">
+    <section className="py-20 px-6 md:px-12 lg:px-20 w-full bg-transparent border-t border-border">
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
     {cards.map((card, index) => (
       <GlowingCard key={index} title={card.title} description={card.description} />

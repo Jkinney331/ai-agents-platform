@@ -21,7 +21,7 @@ import dynamic from "next/dynamic";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center divide-y divide-border min-h-screen w-full">
+    <main className="flex flex-col w-full min-h-screen space-y-0">
       <HeroSection />
       <CompanyShowcase />
       <BentoSection />
@@ -36,7 +36,7 @@ export default function Home() {
       <WhyNowSection/>
       <PricingSection />
       <TestimonialSection />
-      {/* <ContactSection /> */}
+      <ContactSection />
       <FAQSection />
       <CTASection />
       <FooterSection />

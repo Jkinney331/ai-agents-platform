@@ -29,7 +29,7 @@ const features = [
 
 const GlowCard = () => {
   return (
-    <div className="w-full max-w-5xl mx-auto px-8 py-10">
+    <div className="w-full px-6 md:px-12 lg:px-20 py-20 border-t border-border relative z-10">
       {/* Section Heading */}
       <h2 className="text-2xl font-bold text-center mb-8 dark:text-white text-gray-900">
          The Hidden Advantage

@@ -10,8 +10,8 @@ const FooterSection = () => {
   const tablet = useMediaQuery("(max-width: 1024px)");
 
   return (
-    <footer id="footer" className="w-full pb-0">
-      <div className="flex flex-col items-center justify-center p-10 text-center">
+    <footer id="footer" className="w-full pb-0 border-t border-border">
+      <div className="flex flex-col items-center justify-center px-6 md:px-12 lg:px-20 py-10 text-center">
         <Link href="/" className="flex items-center gap-2 justify-center">
           <p className="text-xl font-semibold text-primary">FlipTech Pro</p>
         </Link>

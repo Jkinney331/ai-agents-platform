@@ -47,7 +47,7 @@ export function FirstBentoAnimation() {
       ref={ref}
       className="w-full h-full p-4 flex flex-col items-center justify-center gap-5"
     >
-      <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-20"></div>
+      <div className="pointer-events-none absolute bottom-0 left-0 h-20 w-full bg-gradient-to-t from-background to-transparent z-10"></div>
       <motion.div
         className="max-w-md mx-auto w-full flex flex-col gap-2"
         animate={{

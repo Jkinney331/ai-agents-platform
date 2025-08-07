@@ -75,7 +75,7 @@ export const siteConfig = {
       height={80}
     />
   ),
-},
+      },
     ],
   },
   bentoSection: {
@@ -130,12 +130,12 @@ export const siteConfig = {
         price: "9,500",
         features: [
           "Complete 14-day AI solution implementation",
-          "Custom AI model development and training",
-          "Integration with your existing systems",
-          "Comprehensive documentation",
-          "2 weeks of post-launch support",
-          "Knowledge transfer session for your team",
-          "AI Control Dashboard included",
+"Custom AI model development and training",
+"Integration with your existing systems",
+"Comprehensive documentation",
+"2 weeks of post-launch support",
+"Knowledge transfer session for your team",
+"AI Control Dashboard included",
           "30-day money-back guarantee",
         ],
         description: "Your complete AI solution in 14 days",

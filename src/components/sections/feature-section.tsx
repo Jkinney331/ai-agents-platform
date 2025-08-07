@@ -3,7 +3,9 @@ import { Feature as FeatureComponent } from "@/components/ui/feature-card";
 import { siteConfig } from "@/lib/config";
 
 const FeatureSection = () => {
-  const { title, items } = siteConfig.featureSection;
+  // const { title, items } = siteConfig.featureSection;
+  const title = "Features";
+  const items: any[] = [];
 
   return (
     <section

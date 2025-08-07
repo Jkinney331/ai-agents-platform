@@ -11,8 +11,16 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="w-full relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated brand paths background */}
-      <BackgroundPaths title="Hero background" pathCount={14} opacity={0.35} strokeWidth={1.1} speedMs={13000} />
+      {/* Animated background with stronger curves and faster motion */}
+      <BackgroundPaths
+        title="Hero background"
+        pathCount={28}
+        opacity={0.55}
+        strokeWidth={1.15}
+        speedMs={5200}
+        curveIntensity={2.8}
+        rotateDeg={-28}
+      />
 
       <div className="relative flex flex-col items-center w-full px-6 md:px-12 lg:px-20">
         <div className="relative z-10 w-full h-full flex flex-col gap-10 items-center justify-center py-28">

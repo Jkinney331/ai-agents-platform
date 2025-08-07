@@ -132,7 +132,7 @@ async function createEmailTransporter() {
     throw new Error('Email configuration is missing');
   }
 
-  return nodemailer.createTransporter(emailConfig);
+  return nodemailer.createTransport(emailConfig);
 }
 
 async function sendConfirmationEmail(submission: ContactSubmission): Promise<void> {
@@ -259,7 +259,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<ContactFo
       return NextResponse.json(
         {
           success: false,
-          message: `Validation error: ${error.errors.map(e => e.message).join(', ')}`,
+          message: `Validation error: ${error.issues.map(e => e.message).join(', ')}`,
         },
         { status: 400 }
       );

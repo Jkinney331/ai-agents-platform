@@ -4,7 +4,10 @@ import { SectionHeader } from "@/components/section-header";
 import { siteConfig } from "@/lib/config";
 
 const GrowthSection = () =>{
-  const { title, description, items } = siteConfig.growthSection;
+  // const { title, description, items } = siteConfig.growthSection;
+  const title = "Growth";
+  const description = "Growth description";
+  const items: any[] = [];
 
   return (
     <section

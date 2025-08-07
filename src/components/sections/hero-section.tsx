@@ -9,7 +9,7 @@ const HeroSection = () => {
   const { hero } = siteConfig;
 
   return (
-    <section id="hero" className="w-full relative">
+    <section id="hero" className="w-full relative min-h-screen flex items-center justify-center">
        <div 
   className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-indigo-900/20"
   style={{ 
@@ -27,10 +27,10 @@ const HeroSection = () => {
 </div>
       <div className="relative flex flex-col items-center w-full px-6 md:px-12 lg:px-20">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 -z-10 h-[600px] md:h-[800px] w-full animated-bg" />
+          <div className="absolute inset-0 -z-10 h-full w-full animated-bg" />
 
         </div>
-        <div className="relative z-10 pt-32 w-full h-full flex flex-col gap-10 items-center justify-center">
+        <div className="relative z-10 w-full h-full flex flex-col gap-10 items-center justify-center py-28">
           {/* <p className="border border-border bg-accent rounded-full text-sm h-8 px-3 flex items-center gap-2">
             {hero.badgeIcon}
             {hero.badge}

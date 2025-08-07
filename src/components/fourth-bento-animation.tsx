@@ -176,7 +176,7 @@ export function FourthBentoAnimation({
       </div>
 
       {/* Days of the week */}
-      <div className="absolute top-4 left-0 right-0 flex justify-between max-w-md mx-auto px-8 text-sm text-gray-500">
+      <div className="absolute top-4 left-0 right-0 flex justify-between w-full px-8 text-sm text-gray-500">
         <span>Tue</span>
         <span>Wed</span>
         <span>Thu</span>

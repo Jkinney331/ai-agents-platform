@@ -26,7 +26,7 @@ const FAQSection = () => {
         </p>
       </SectionHeader>
 
-      <div className="max-w-3xl w-full mx-auto px-6 md:px-12 lg:px-20">
+              <div className="w-full px-6 md:px-12 lg:px-20">
         <Accordion
           type="single"
           collapsible

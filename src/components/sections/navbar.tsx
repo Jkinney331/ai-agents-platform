@@ -105,7 +105,7 @@ export function Navbar() {
       >
         <div
           className={cn(
-            "mx-auto max-w-7xl rounded-2xl transition-all duration-300  xl:px-0",
+            "w-full rounded-2xl transition-all duration-300",
             hasScrolled
               ? "px-2 border border-border backdrop-blur-lg bg-background/75"
               : "shadow-none px-7",

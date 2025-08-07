@@ -24,7 +24,7 @@ const TestimonialSection = () => {
         </p>
 
         {/* ✅ Glowing Testimonial Card */}
-        <div className="relative w-full max-w-xl mx-auto mt-10">
+        <div className="relative w-full mt-10">
           <GlowingEffect
             blur={12}
             glow

@@ -66,7 +66,7 @@ const agentData = [
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Meet Your Specialized AI Agents
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground w-full">
             Every agent comes with an intuitive dashboard to fine-tune, train, and optimize performance.
           </p>
         </div>
@@ -117,7 +117,7 @@ const agentData = [
         </div>
 
         {/* AI Control Dashboard Section */}
-        <div className="max-w-4xl mx-auto p-8 bg-zinc-100 dark:bg-zinc-800 rounded-2xl border border-gray-200 dark:border-zinc-700 shadow-md text-center">
+        <div className="w-full p-8 bg-zinc-100 dark:bg-zinc-800 rounded-2xl border border-gray-200 dark:border-zinc-700 shadow-md text-center">
           <Settings className="mx-auto text-indigo-500 dark:text-indigo-400" size={48} />
           <h4 className="text-2xl font-semibold text-black dark:text-white mt-4">{selectedAgent.name}'s Dashboard</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">

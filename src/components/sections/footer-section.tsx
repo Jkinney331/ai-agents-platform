@@ -16,7 +16,7 @@ const FooterSection = () => {
           <p className="text-xl font-semibold text-primary">FlipTech Pro</p>
         </Link>
 
-        <p className="tracking-tight text-muted-foreground font-medium mt-4 max-w-xl">
+        <p className="tracking-tight text-muted-foreground font-medium mt-4 w-full">
           Deploy specialized AI teams across marketing, operations, product, research, and support.
           Each team works seamlessly together, handling complex tasks so your human teams can focus on strategic initiatives.
         </p>

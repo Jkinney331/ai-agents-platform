@@ -88,7 +88,7 @@ const ContactSection = () => {
         </p>
       </SectionHeader>
 
-      <div className="max-w-2xl w-full mx-auto px-6">
+      <div className="w-full px-6">
         <form 
           onSubmit={handleSubmit}
           className="space-y-6 p-8 border border-border rounded-lg bg-card"

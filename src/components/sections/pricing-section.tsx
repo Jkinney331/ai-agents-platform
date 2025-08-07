@@ -30,13 +30,13 @@ const PricingSection = () => {
         <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-center">
           {siteConfig.pricing.title}
         </h2>
-        <p className="text-muted-foreground text-center font-medium max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-center font-medium w-full">
           {siteConfig.pricing.description}
         </p>
       </SectionHeader>
 
       {/* Pricing Card */}
-      <div className="w-full max-w-md mx-auto rounded-xl border border-border dark:border-white/10 bg-white/70 dark:bg-zinc-900/50 backdrop-blur-md p-8 shadow-xl">
+              <div className="w-full rounded-xl border border-border dark:border-white/10 bg-white/70 dark:bg-zinc-900/50 backdrop-blur-md p-8 shadow-xl">
         {/* Price */}
         <div className="mb-6 flex flex-col items-center">
           <PriceDisplay price={tier.price} />

@@ -13,7 +13,7 @@ export default function LogoCarousel() {
   ]);
 
   return (
-    <div className="overflow-hidden w-full max-w-6xl mx-auto pt-10" ref={emblaRef}>
+          <div className="overflow-hidden w-full pt-10" ref={emblaRef}>
       <div className="flex">
         {logos.map((logo) => (
           <div

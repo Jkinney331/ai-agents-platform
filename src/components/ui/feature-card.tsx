@@ -16,10 +16,10 @@ type FeatureProps = {
 export const Feature = ({ featureItems }: FeatureProps) => {
   return (
     <div className="w-full">
-      <div className="flex w-full flex-col items-center justify-center max-w-7xl mx-auto">
+      <div className="flex w-full flex-col items-center justify-center w-full">
         <div className="grid h-full grid-cols-5 gap-x-10 px-10 md:px-20 items-center w-full">
           <div className="col-span-5 w-full h-full flex justify-center items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
               {featureItems.map((item) => (
                 <div
                   key={item.id}

@@ -94,7 +94,7 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky z-50 mx-4 flex justify-center transition-all duration-300 md:mx-0",
+        "sticky z-[999] mx-4 flex justify-center transition-all duration-300 md:mx-0",
         hasScrolled ? "top-6" : "top-4 mx-0",
       )}
     >
@@ -105,10 +105,8 @@ export function Navbar() {
       >
         <div
           className={cn(
-            "w-full rounded-2xl transition-all duration-300",
-            hasScrolled
-              ? "px-2 border border-border backdrop-blur-lg bg-background/75"
-              : "shadow-none px-7",
+            "w-full rounded-2xl transition-all duration-300 border border-border backdrop-blur-lg bg-background/80 overflow-hidden",
+            hasScrolled ? "px-2" : "px-7",
           )}
         >
           <div className="flex h-[56px] items-center justify-between p-4">

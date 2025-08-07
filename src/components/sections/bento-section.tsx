@@ -2,7 +2,6 @@
 
 import { SectionHeader } from "@/components/section-header";
 import { siteConfig } from "@/lib/config";
-import { FlippingCard } from "@/components/ui/flipping-card";
 
 const BentoSection = () => {
   const { title, description, items } = siteConfig.bentoSection;
@@ -24,26 +23,6 @@ const BentoSection = () => {
             {description}
           </p>
         </SectionHeader>
-
-        {/* FlippingCard Demo */}
-        <div className="flex justify-center mb-8">
-          <FlippingCard
-            frontContent={
-              <div className="flex flex-col items-center justify-center h-full p-6">
-                <h3 className="text-xl font-bold mb-2">Try the Flip Effect!</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Hover to see the 3D flip animation</p>
-              </div>
-            }
-            backContent={
-              <div className="flex flex-col items-center justify-center h-full p-6">
-                <h3 className="text-xl font-bold mb-2">Amazing!</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">This is the 3D flip card effect in action</p>
-              </div>
-            }
-            height={150}
-            width={250}
-          />
-        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
           {items.map((item) => (

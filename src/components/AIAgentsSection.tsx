@@ -59,7 +59,7 @@ const agentData = [
   const [selectedAgent, setSelectedAgent] = useState(agentData[0]);
 
   return (
-    <section className="py-20 bg-agent-background px-6 md:px-12 lg:px-20 w-full border-t border-border relative z-10">
+    <section className="py-20 mt-10 bg-agent-background px-6 md:px-12 lg:px-20 w-full border-t border-border relative z-0">
       <div className="w-full">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -114,16 +114,6 @@ const agentData = [
               </p>
             </div>
           </Card>
-        </div>
-
-        {/* AI Control Dashboard Section */}
-        <div className="w-full p-8 bg-zinc-100 dark:bg-zinc-800 rounded-2xl border border-gray-200 dark:border-zinc-700 shadow-md text-center">
-          <Settings className="mx-auto text-indigo-500 dark:text-indigo-400" size={48} />
-          <h4 className="text-2xl font-semibold text-black dark:text-white mt-4">{selectedAgent.name}'s Dashboard</h4>
-          <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
-            Fine-tune and monitor: <span className="font-medium text-indigo-600 dark:text-indigo-400">{selectedAgent.role}</span>
-          </p>
-          <p className="text-sm text-muted-foreground mt-1">{selectedAgent.description}</p>
         </div>
       </div>
     </section>

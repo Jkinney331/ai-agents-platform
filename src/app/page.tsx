@@ -29,8 +29,8 @@ export default function Home() {
       {/* <QuoteSection /> */}
       <EmpowerCards/>
       <AIAgentsSection/>
-      <GlowCard/>
       <DashboardFeaturesDemo/>
+      <GlowCard/>
       {/* <GrowthSection /> */}
       <FlipTechProcess/>
       <CaseStudiesSection/>

@@ -69,14 +69,14 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
   }, []);
 
   return (
-    <section className="w-full px-6 md:px-12 lg:px-20 py-20 border-t border-border">
+    <section className="w-full px-6 md:px-12 lg:px-20 py-20 bg-white dark:bg-gray-950">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
         <div className="flex-1">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {title}
           </h2>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl">
+          <p className="text-gray-600 dark:text-gray-300 max-w-2xl text-lg">
             {description}
           </p>
         </div>
@@ -87,7 +87,7 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
             onClick={prevSlide}
             disabled={isAtStart}
             className={cn(
-              "p-2 rounded-full border transition-all duration-200",
+              "p-3 rounded-full border transition-all duration-200",
               "hover:bg-gray-100 dark:hover:bg-gray-800",
               "disabled:opacity-50 disabled:cursor-not-allowed",
               "border-gray-300 dark:border-gray-600"
@@ -99,7 +99,7 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
             onClick={nextSlide}
             disabled={isAtEnd}
             className={cn(
-              "p-2 rounded-full border transition-all duration-200",
+              "p-3 rounded-full border transition-all duration-200",
               "hover:bg-gray-100 dark:hover:bg-gray-800",
               "disabled:opacity-50 disabled:cursor-not-allowed",
               "border-gray-300 dark:border-gray-600"
@@ -131,8 +131,8 @@ export function Gallery4({ title, description, items }: Gallery4Props) {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Gradient overlay for better text readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
+                  {/* Subtle gradient overlay for better text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                 </div>
 
                 {/* Content */}
